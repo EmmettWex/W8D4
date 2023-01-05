@@ -13,6 +13,12 @@ class Clock {
 
         // 4. Schedule the tick at 1 second intervals.
 
+        //  We tried doing a while loop here as well. But what we found was
+        //  The loop would start back over before the timeout was finished,
+        //  So it never actually got to call the _tick(); function
+        //  So we created another helper function that used recursion
+        //  In order to make the clock work (see below)
+
         this.clockTicks();
 
     }
